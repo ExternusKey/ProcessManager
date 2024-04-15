@@ -79,22 +79,22 @@ internal class Program
         }
         catch (FormatException)
         {
-            HandleError("Неверный тип данных. Требуется число");
+            HandleError("Неверный тип данных. Требуется число.");
             return;
         }
         catch (ArgumentException)
         {
-            HandleError("Такой процесс не существует");
+            HandleError("Такой процесс не существует.");
             return;
         }
         catch (OverflowException)
         {
-            HandleError("Переданное значение не укладывается в диапазон int32");
+            HandleError("Переданное значение не укладывается в диапазон int32.");
             return;
         }
 
         Console.ForegroundColor = ConsoleColor.Green;
-        Console.WriteLine($"Процесс {pid} удалён");
+        Console.WriteLine($"Процесс {pid} завершён.");
         Console.ResetColor();
         Thread.Sleep(1500);
         return;
